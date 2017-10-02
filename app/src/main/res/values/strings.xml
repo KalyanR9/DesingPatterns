@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DesignPatternsSample</string>
+
+    <string name="lbl_creational">Creation Pattern</string>
+    <string name="lbl_structural">Structural Pattern</string>
+    <string name="lbl_behavioural">Behavioural Pattern</string>
+    <string name="lbl_creation_singleton_reflaction">Singleton (Reflaction Safe)</string>
+    <string name="lbl_creation_singleton_cloning">Singleton (Cloning Safe)</string>
+    <string name="lbl_creation_singleton_serialization">Singleton (Serialization Safe)</string>
+    <string name="lbl_creation_singleton_multithreaded">Singleton (Multithreaded Safe)</string>
+    <string name="lbl_creation_singleton_holder">Singleton (Holder Class)</string>
+    <string name="lbl_creation_singleton_enum">Singleton (Enum Class)</string>
+    <string name="lbl_creation_factory">Factory Pattern</string>
+    <string name="lbl_creation_abstract_factory">Abstract Factory Pattern</string>
+    <string name="lbl_creation_builder">Builder Pattern</string>
+    <string name="lbl_creation_prototype">Prototype Pattern</string>
+</resources>

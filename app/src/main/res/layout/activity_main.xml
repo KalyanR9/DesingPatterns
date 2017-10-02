@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.designpattern.inventyfy.MainActivity">
+
+    <Button
+        android:id="@+id/btn_creational"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/lbl_creational"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_structural"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/lbl_structural"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_behavioural"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/lbl_behavioural"
+        android:textSize="20sp" />
+</LinearLayout>
