@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
@@ -34,7 +35,12 @@ import com.designpattern.inventyfy.utils.widget.CustomDialogFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_CLONING_SAGE;
+import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_ENUM_CLASS;
+import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_HOLDER_CLASS;
+import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_MULTITHREADED_SAFE;
 import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_REFLACTION_SAFE;
+import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_SERIALIZE_SAFE;
 
 /**
  * Created by drupdesai
@@ -55,6 +61,9 @@ public class CreationalActivity extends AppCompatActivity implements ItemAdapter
         creationalItemView = findViewById(R.id.rv_creational_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         creationalItemView.setLayoutManager(layoutManager);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
+                layoutManager.getOrientation());
+        creationalItemView.addItemDecoration(dividerItemDecoration);
         ItemAdapter itemAdapter = new ItemAdapter(designPatternEntities, this);
         creationalItemView.setAdapter(itemAdapter);
     }
@@ -96,7 +105,27 @@ public class CreationalActivity extends AppCompatActivity implements ItemAdapter
                 break;
             case Constants.CREATIONAL_SINGLETON_CLONING:
                 customDialogFragment = CustomDialogFragment.getInstance(getString(R.string.lbl_creation_singleton_cloning),
-                        createMessageText(R.string.msg_singleton_clone, ""));
+                        createMessageText(R.string.msg_singleton_clone, SINGLETON_CLONING_SAGE));
+                customDialogFragment.show(fm, CustomDialogFragment.class.getSimpleName());
+                break;
+            case Constants.CREATIONAL_SINGLETON_SERIALIZATION:
+                customDialogFragment = CustomDialogFragment.getInstance(getString(R.string.lbl_creation_singleton_serialization),
+                        createMessageText(R.string.msg_singleton_serialize, SINGLETON_SERIALIZE_SAFE));
+                customDialogFragment.show(fm, CustomDialogFragment.class.getSimpleName());
+                break;
+            case Constants.CREATIONAL_SINGLETON_MULTITHREADED:
+                customDialogFragment = CustomDialogFragment.getInstance(getString(R.string.lbl_creation_singleton_multithreaded),
+                        createMessageText(R.string.msg_singleton_multithreaded, SINGLETON_MULTITHREADED_SAFE));
+                customDialogFragment.show(fm, CustomDialogFragment.class.getSimpleName());
+                break;
+            case Constants.CREATIONAL_SINGLETON_HOLDER:
+                customDialogFragment = CustomDialogFragment.getInstance(getString(R.string.lbl_creation_singleton_holder),
+                        createMessageText(R.string.msg_singleton_holder, SINGLETON_HOLDER_CLASS));
+                customDialogFragment.show(fm, CustomDialogFragment.class.getSimpleName());
+                break;
+            case Constants.CREATIONAL_SINGLETON_ENUM:
+                customDialogFragment = CustomDialogFragment.getInstance(getString(R.string.lbl_creation_singleton_enum),
+                        createMessageText(R.string.msg_singleton_enum, SINGLETON_ENUM_CLASS));
                 customDialogFragment.show(fm, CustomDialogFragment.class.getSimpleName());
                 break;
         }
