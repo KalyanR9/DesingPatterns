@@ -20,6 +20,10 @@
         <activity
             android:name=".creational.CreationalActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ActivityFragmentHolder"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

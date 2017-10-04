@@ -38,6 +38,5 @@ public class Constants {
      * Activity/Fragment extra
      */
     public static final String EXTRA_DIALOG_TITLE = "dialog_title";
-    public static final String EXTRA_DIALOG_MESSAGE = "dialog_message";
-
+    public static final String EXTRA_FRAGMENT_TYPE = "fragment_type";
 }

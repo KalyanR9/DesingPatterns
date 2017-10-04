@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lbl_factory_pattern_demo">Factory Pattern Demo</string>
+    <string name="lbl_factory_parent_class">IMobileSpec(interface)\n\nboolean isGsm();\nboolean isStereoSpeaker();\nboolean isAmoledDisplay();</string>
+    <string name="lbl_motorola">Motorola</string>
+    <string name="lbl_samsung">Samsung</string>
+    <string name="lbl_source_code_link">Complete Source Code Link</string>
+    <string name="lbl_result_text">isGsm() : %1$b\nisStereoSpeaker() : %2$b\nisAmoledDisplay() : %3$b</string>
+</resources>

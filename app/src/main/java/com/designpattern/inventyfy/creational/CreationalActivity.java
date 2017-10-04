@@ -1,7 +1,7 @@
 package com.designpattern.inventyfy.creational;
 
+import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -10,22 +10,11 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
-import android.text.method.LinkMovementMethod;
 import android.text.style.BackgroundColorSpan;
-import android.text.style.ClickableSpan;
-import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
-import android.text.style.StrikethroughSpan;
-import android.text.style.StyleSpan;
-import android.text.style.SubscriptSpan;
-import android.text.style.SuperscriptSpan;
 import android.text.style.URLSpan;
-import android.text.style.UnderlineSpan;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import com.designpattern.inventyfy.ActivityFragmentHolder;
 import com.designpattern.inventyfy.R;
 import com.designpattern.inventyfy.adapter.ItemAdapter;
 import com.designpattern.inventyfy.dao.DesignPatternTypeEntity;
@@ -35,12 +24,12 @@ import com.designpattern.inventyfy.utils.widget.CustomDialogFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_CLONING_SAGE;
-import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_ENUM_CLASS;
-import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_HOLDER_CLASS;
-import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_MULTITHREADED_SAFE;
-import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_REFLACTION_SAFE;
-import static com.designpattern.inventyfy.utils.widget.LinkConstants.SINGLETON_SERIALIZE_SAFE;
+import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_CLONING_SAGE;
+import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_ENUM_CLASS;
+import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_HOLDER_CLASS;
+import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_MULTITHREADED_SAFE;
+import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_REFLACTION_SAFE;
+import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_SERIALIZE_SAFE;
 
 /**
  * Created by drupdesai
@@ -127,6 +116,11 @@ public class CreationalActivity extends AppCompatActivity implements ItemAdapter
                 customDialogFragment = CustomDialogFragment.getInstance(getString(R.string.lbl_creation_singleton_enum),
                         createMessageText(R.string.msg_singleton_enum, SINGLETON_ENUM_CLASS));
                 customDialogFragment.show(fm, CustomDialogFragment.class.getSimpleName());
+                break;
+            case Constants.CREATIONAL_FACTORY:
+                Intent factoryIntent = new Intent(CreationalActivity.this, ActivityFragmentHolder.class);
+                factoryIntent.putExtra(Constants.EXTRA_FRAGMENT_TYPE, Constants.CREATIONAL_FACTORY);
+                startActivity(factoryIntent );
                 break;
         }
     }
