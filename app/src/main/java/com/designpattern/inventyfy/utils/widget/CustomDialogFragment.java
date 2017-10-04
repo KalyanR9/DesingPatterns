@@ -3,7 +3,10 @@ package com.designpattern.inventyfy.utils.widget;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.text.SpannableString;
+import android.text.SpannedString;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,11 +24,13 @@ public class CustomDialogFragment extends DialogFragment {
     private TextView popupTitle;
     private TextView popupMessage;
 
-    public static CustomDialogFragment getInstance(final String title, final String message) {
+    private SpannableString spannableMessage;
+
+    public static CustomDialogFragment getInstance(final String title, final SpannableString message) {
         final CustomDialogFragment customDialogFragment = new CustomDialogFragment();
         final Bundle bundle = new Bundle();
         bundle.putString(Constants.EXTRA_DIALOG_TITLE, title);
-        bundle.putString(Constants.EXTRA_DIALOG_MESSAGE, message);
+        customDialogFragment.spannableMessage = message;
         customDialogFragment.setArguments(bundle);
         return customDialogFragment;
     }
@@ -50,14 +55,14 @@ public class CustomDialogFragment extends DialogFragment {
         popupMessage = view.findViewById(R.id.txt_message);
 
         String title = getArguments().getString(Constants.EXTRA_DIALOG_TITLE);
-        String message = getArguments().getString(Constants.EXTRA_DIALOG_MESSAGE);
 
         if (!TextUtils.isEmpty(title)) {
             popupTitle.setText(title);
         }
 
-        if (!TextUtils.isEmpty(message)) {
-            popupMessage.setText(message);
+        if (!TextUtils.isEmpty(spannableMessage)) {
+            popupMessage.setMovementMethod(LinkMovementMethod.getInstance());
+            popupMessage.setText(spannableMessage);
         }
     }
 }

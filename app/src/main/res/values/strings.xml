@@ -14,4 +14,10 @@
     <string name="lbl_creation_abstract_factory">Abstract Factory Pattern</string>
     <string name="lbl_creation_builder">Builder Pattern</string>
     <string name="lbl_creation_prototype">Prototype Pattern</string>
+
+    <string name="msg_singleton_reflaction">You can Throw runtime exception is someone tries to make instance in case one instance is already exist.
+        \n\nprivate SingletonReflactionSafe() {\n\tif (instance != null) {\n\t\tthrow new RuntimeException("Message");\n\t}\n}\n\nCOMPLETE TO SOURCE CODE</string>
+    <string name="msg_singleton_clone">Throw CloneNotSupportedException exception from Override clone() method if someone tries to make other instance of it. Like below code
+    \n\n@Override\nprotected Object clone() throws CloneNotSupportedException {\n\tif (instance != null) {\n\t\tthrow new CloneNotSupportedException("message");\n\t
+        }\n\treturn super.clone();\n}\n\nCOMPLETE SOURCE CODE</string>
 </resources>
