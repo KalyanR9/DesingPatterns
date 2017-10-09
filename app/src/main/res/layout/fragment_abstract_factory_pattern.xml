@@ -14,20 +14,20 @@
 
             <TextView
                 android:id="@+id/txt_header"
-                android:text="@string/lbl_factory_pattern_demo"
-                style="@style/headerTextStyle"/>
+                style="@style/headerTextStyle"
+                android:text="@string/lbl_abstract_factory_pattern_demo" />
 
             <TextView
                 android:id="@+id/txt_description"
+                style="@style/patternDescription"
                 android:layout_below="@+id/txt_header"
-                android:text="@string/msg_factory"
-                style="@style/patternDescription"/>
+                android:text="@string/msg_abstract_factory" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_below="@+id/txt_description"
-                android:background="@color/color_black"/>
+                android:background="@color/color_black" />
 
             <TextView
                 android:id="@+id/txt_parent_implementation"
@@ -35,14 +35,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txt_description"
                 android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="@string/lbl_factory_parent_class"
+                android:padding="10dp"
+                android:text="@string/lbl_abstract_factory_implementation_need"
                 android:textColor="@color/color_secondary_text_color"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/btn_motorola"
+                android:id="@+id/btn_lenovo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -50,7 +50,7 @@
                 android:layout_below="@id/txt_parent_implementation"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
-                android:text="@string/lbl_motorola" />
+                android:text="@string/lbl_lenovo" />
 
             <Button
                 android:id="@+id/btn_samsung"
@@ -61,7 +61,7 @@
                 android:layout_below="@id/txt_parent_implementation"
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/lbl_samsung" />
+                android:text="@string/lbl_samsung_s7" />
 
             <TextView
                 android:id="@+id/txt_final_result"
@@ -72,7 +72,7 @@
                 android:gravity="center"
                 android:textColor="@color/color_secondary_text_color"
                 android:textSize="16sp"
-                tools:text="@string/lbl_result_text" />
+                tools:text="@string/lbl_screen_resolution_text" />
 
         </RelativeLayout>
     </ScrollView>
@@ -84,5 +84,4 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:padding="15dp" />
-
 </RelativeLayout>

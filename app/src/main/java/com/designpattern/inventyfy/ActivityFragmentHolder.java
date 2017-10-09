@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
+import com.designpattern.inventyfy.creational.abstractfactorypattern.ui.AbstractFactoryPatternImplFragment;
 import com.designpattern.inventyfy.creational.facorypattern.ui.FactoryPatternImplFragment;
 import com.designpattern.inventyfy.utils.Constants;
 
@@ -34,6 +35,9 @@ public class ActivityFragmentHolder extends AppCompatActivity {
         switch (screenType) {
             case Constants.CREATIONAL_FACTORY:
                 launchFragment(FactoryPatternImplFragment.getInstance());
+                break;
+            case Constants.CREATIONAL_ABSTRACT_FACTORY:
+                launchFragment(AbstractFactoryPatternImplFragment.getInstance());
                 break;
         }
     }

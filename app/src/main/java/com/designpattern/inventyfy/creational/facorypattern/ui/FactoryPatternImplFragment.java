@@ -15,6 +15,7 @@ import com.designpattern.inventyfy.creational.facorypattern.IMobileSpecification
 import com.designpattern.inventyfy.creational.facorypattern.MobileFactory;
 import com.designpattern.inventyfy.utils.UiUtils;
 
+import static com.designpattern.inventyfy.utils.LinkConstants.FACTORY_PATTERN;
 import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_ENUM_CLASS;
 
 /**
@@ -60,7 +61,7 @@ public class FactoryPatternImplFragment extends Fragment implements View.OnClick
         sourceCodeLink = view.findViewById(R.id.txt_source_link);
         sourceCodeLink.setMovementMethod(LinkMovementMethod.getInstance());
         sourceCodeLink.setText(UiUtils.getLinkSpannableString(getString(R.string.lbl_source_code_link),
-                SINGLETON_ENUM_CLASS));
+                FACTORY_PATTERN));
     }
 
     @Override

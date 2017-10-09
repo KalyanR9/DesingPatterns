@@ -122,6 +122,11 @@ public class CreationalActivity extends AppCompatActivity implements ItemAdapter
                 factoryIntent.putExtra(Constants.EXTRA_FRAGMENT_TYPE, Constants.CREATIONAL_FACTORY);
                 startActivity(factoryIntent );
                 break;
+            case Constants.CREATIONAL_ABSTRACT_FACTORY:
+                Intent abstractFactoryIntent = new Intent(CreationalActivity.this, ActivityFragmentHolder.class);
+                abstractFactoryIntent.putExtra(Constants.EXTRA_FRAGMENT_TYPE, Constants.CREATIONAL_ABSTRACT_FACTORY);
+                startActivity(abstractFactoryIntent);
+                break;
         }
     }
 
