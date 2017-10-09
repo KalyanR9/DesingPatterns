@@ -16,6 +16,6 @@ public class LinkConstants {
     public static final String SINGLETON_HOLDER_CLASS = "https://github.com/drdesai03/DesingPatterns/blob/master/app/src/main/java/com/designpattern/inventyfy/creational/singleton/SingletonHolderClass.java";
     public static final String SINGLETON_ENUM_CLASS = "https://github.com/drdesai03/DesingPatterns/blob/master/app/src/main/java/com/designpattern/inventyfy/creational/singleton/SingletonEunm.java";
 
-    public static final String FACTORY_PATTERN = "";
-    public static final String ABSTRACT_FACTORY_PATTERN = "";
+    public static final String FACTORY_PATTERN = "https://github.com/drdesai03/DesingPatterns/tree/master/app/src/main/java/com/designpattern/inventyfy/creational/facorypattern";
+    public static final String ABSTRACT_FACTORY_PATTERN = "https://github.com/drdesai03/DesingPatterns/tree/master/app/src/main/java/com/designpattern/inventyfy/creational/abstractfactorypatternw";
 }
