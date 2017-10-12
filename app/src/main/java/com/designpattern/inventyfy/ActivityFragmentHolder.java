@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
 import com.designpattern.inventyfy.creational.abstractfactorypattern.ui.AbstractFactoryPatternImplFragment;
+import com.designpattern.inventyfy.creational.builder.ui.BuilderFactoryPatternFragment;
 import com.designpattern.inventyfy.creational.facorypattern.ui.FactoryPatternImplFragment;
+import com.designpattern.inventyfy.creational.prototype.ui.PrototypePatternFragment;
 import com.designpattern.inventyfy.utils.Constants;
 
 /**
@@ -38,6 +40,12 @@ public class ActivityFragmentHolder extends AppCompatActivity {
                 break;
             case Constants.CREATIONAL_ABSTRACT_FACTORY:
                 launchFragment(AbstractFactoryPatternImplFragment.getInstance());
+                break;
+            case Constants.CREATIONAL_BUILDER:
+                launchFragment(BuilderFactoryPatternFragment.getInstance());
+                break;
+            case Constants.CREATIONAL_PROTOTYPE:
+                launchFragment(PrototypePatternFragment.getInstance());
                 break;
         }
     }

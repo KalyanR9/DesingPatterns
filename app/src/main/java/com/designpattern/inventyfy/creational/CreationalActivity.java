@@ -28,7 +28,7 @@ import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_CLONING_
 import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_ENUM_CLASS;
 import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_HOLDER_CLASS;
 import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_MULTITHREADED_SAFE;
-import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_REFLACTION_SAFE;
+import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_REFLECTION_SAFE;
 import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_SERIALIZE_SAFE;
 
 /**
@@ -89,7 +89,7 @@ public class CreationalActivity extends AppCompatActivity implements ItemAdapter
         switch (itemId) {
             case Constants.CREATIONAL_SINGLETON_REFLACTION:
                 customDialogFragment = CustomDialogFragment.getInstance(getString(R.string.lbl_creation_singleton_reflaction),
-                        createMessageText(R.string.msg_singleton_reflaction, SINGLETON_REFLACTION_SAFE));
+                        createMessageText(R.string.msg_singleton_reflaction, SINGLETON_REFLECTION_SAFE));
                 customDialogFragment.show(fm, CustomDialogFragment.class.getSimpleName());
                 break;
             case Constants.CREATIONAL_SINGLETON_CLONING:
@@ -126,6 +126,16 @@ public class CreationalActivity extends AppCompatActivity implements ItemAdapter
                 Intent abstractFactoryIntent = new Intent(CreationalActivity.this, ActivityFragmentHolder.class);
                 abstractFactoryIntent.putExtra(Constants.EXTRA_FRAGMENT_TYPE, Constants.CREATIONAL_ABSTRACT_FACTORY);
                 startActivity(abstractFactoryIntent);
+                break;
+            case Constants.CREATIONAL_BUILDER:
+                Intent builderIntent = new Intent(CreationalActivity.this, ActivityFragmentHolder.class);
+                builderIntent.putExtra(Constants.EXTRA_FRAGMENT_TYPE, Constants.CREATIONAL_BUILDER);
+                startActivity(builderIntent);
+                break;
+            case Constants.CREATIONAL_PROTOTYPE:
+                Intent prototypeIntent = new Intent(CreationalActivity.this, ActivityFragmentHolder.class);
+                prototypeIntent.putExtra(Constants.EXTRA_FRAGMENT_TYPE, Constants.CREATIONAL_PROTOTYPE);
+                startActivity(prototypeIntent);
                 break;
         }
     }

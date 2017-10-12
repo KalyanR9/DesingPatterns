@@ -21,4 +21,24 @@
         \n\nScreen Resolution : %2$s</string>
     <string name="msg_abstract_factory">This is more like factories of factory pattern. Abstract factory class will return sub class based on the input factory class.
     \n\nWhen to use?\nA family of related objects is designed to be used together, and you need to enforce this constraint.</string>
+
+    <!--Builder Pattern-->
+    <string name="lbl_builder_pattern">Builder Pattern</string>
+    <string name="msg_builder_pattern">This pattern is to separate the construction of complex object from its representation,
+        so same construction process can create different representation.\n\nThis type of separation reduce the object size.
+        Adding new implementation becomes easier.\nObject construction process becomes independent of the component that makes up the object.
+        \nYou can have more control over the object construction process.</string>
+    <string name="lbl_cake_with_cherry">Cake\nTopping Cherry</string>
+    <string name="lbl_cake_with_chocolate">Cake\nChocolate Flavour</string>
+    <string name="lbl_cake_with_message">Cake\nCake With Message</string>
+
+    <!--Prototype Pattern-->
+    <string name="lbl_prototype">Prototype Pattern</string>
+    <string name="msg_prototype">This pattern is used when the object creation is a costly and affair
+        and requires a lot of time and resources and you have similar object already existing.\n\nThis pattern provides
+        a mechanism to copy the original object to a new object and then modify accordingly.\n\nThis mandates
+        that the object which you are copying should provide the copying feature.\\However whether to
+        use shallow or deep copy of the object properties depends on the requirements.</string>
+    <string name="lbl_samsung_s7_edge">Samsung S7 EDGE</string>
+    <string name="lbl_prototype_result_text">DeviceName : %1$s\nScreenResolution : %2$s\nProcessorType : %3$s\nRAM : %4$d</string>
 </resources>

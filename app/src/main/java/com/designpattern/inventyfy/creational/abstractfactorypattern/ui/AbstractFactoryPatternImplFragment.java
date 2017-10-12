@@ -20,7 +20,6 @@ import com.designpattern.inventyfy.creational.abstractfactorypattern.factory.sam
 import com.designpattern.inventyfy.utils.UiUtils;
 
 import static com.designpattern.inventyfy.utils.LinkConstants.ABSTRACT_FACTORY_PATTERN;
-import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_ENUM_CLASS;
 
 /**
  * Created by desaidr
