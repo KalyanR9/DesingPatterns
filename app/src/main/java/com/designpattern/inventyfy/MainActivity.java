@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.designpattern.inventyfy.creational.CreationalActivity;
+import com.designpattern.inventyfy.structural.StructuralActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(creationalIntent);
                 break;
             case R.id.btn_structural:
+                Intent structuralIntent = new Intent(this, StructuralActivity.class);
+                startActivity(structuralIntent);
                 break;
             case R.id.btn_behavioural:
                 break;

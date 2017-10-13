@@ -15,51 +15,23 @@
     <string name="lbl_creation_builder">Builder Pattern</string>
     <string name="lbl_creation_prototype">Prototype Pattern</string>
 
-    <string name="msg_singleton_reflaction">Using reflaction we can set the private constructor to become visible at runtime.\n \nYou can Throw runtime exception
-        if someone tries to make instance in case one instance is already exist.
-        \n\nprivate SingletonReflactionSafe() {
-            \n\tif (instance != null) {
-                \n\t\tthrow new RuntimeException("Message");
-            \n\t}
-            \n}\n\nCOMPLETE TO SOURCE CODE</string>
-    <string name="msg_singleton_clone">If we try to make instance by cloning it the generated hash code of cloned copy doesn\'t match with actual object.
-        \n \nThrow CloneNotSupportedException exception from Override clone() method if someone tries to make other instance of it. Like below code
-        \n\n@Override\nprotected Object clone() throws CloneNotSupportedException {
-            \n\tif (instance != null) {
-                \n\t\tthrow new CloneNotSupportedException("message");
-            \n\t}
-        \n\treturn super.clone();
-        \n}\n\nCOMPLETE SOURCE CODE</string>
-    <string name="msg_singleton_serialize">When we serialize an object and deserialize it again there are different hash code value generated.\n \nImplement
-        readResolve() method in the singleton class.
-        \n\n\private Object readResolve() {
-            \n\treturn instance;
-        \n}\n\nCOMPLETE SOURCE CODE</string>
-    <string name="msg_singleton_multithreaded">By using double check locking with volatile instance variable we can archive singleton design pattern in multithreaded environment.
-    Refer complete source code.\n \nSource code covers other ways to create singleton and its advantaged and disadvantages.
-    Below is one optimized way we can archive singleton in multithreaded environment
-    \n\nprivate static volatile SingletonMultithreaded instance;\n \n \n
-    public static SingletonMultithreaded getInstanceDoubleCheck() {
-    \n\tif (instance == null) {
-        \n\t\tsynchronized (SingletonMultithreaded.class) {
-            \n\t\t\tif (instance == null) {
-                \n\t\t\t\tinstance = new SingletonMultithreaded();
-            \n\t\t\t}
-        \n\t\t}
-    \n\t}
-    \nreturn instance;
-    \n}\n\nCOMPLETE SOURCE CODE</string>
-    <string name="msg_singleton_holder">Holder Pattern(Bill Pugh) is different approach to create singleton using inner static helper class.
-        \n\nstatic class Holder {
-            \n\tstatic final SingletonHolderClass instance = new SingletonHolderClass();
-        \n}\n\nCOMPLETE SOURCE CODE</string>
-    <string name="msg_singleton_enum">In enum java ensure that any enum value instantiated only ones.
-        And enum values are globally accessible so is the singleton.\n \nEnum singleton doesn\'t violate
-        any principle of singleton.\n \nDisadvantage : Enum type is somewhat inflexible. It does not allow lazy initialization.
-        \n\n public enum SingletonEunm {
-            \n\tINSTANCE;
-        \n \n\tpublic void doSomethong() {
-        \n\t\t//Do Something
-        \n\t}
-        \n}\n\nCOMPLETE SOURCE CODE</string>
+    <string name="lbl_structural_adapter">Adapter Pattern</string>
+    <string name="lbl_structural_composite">Composite Pattern</string>
+    <string name="lbl_structural_proxy">Proxy Pattern</string>
+    <string name="lbl_structural_flyweight">Flyweight Pattern</string>
+    <string name="lbl_structural_facade">Facade Pattern</string>
+    <string name="lbl_structural_bridge">Bridge Pattern</string>
+    <string name="lbl_structural_decorator">Decorator Pattern</string>
+
+    <string name="lbl_behavioral_template">Template Method Pattern</string>
+    <string name="lbl_behavioral_mediator">Mediator Pattern</string>
+    <string name="lbl_behavioral_chain_of_responsibility">Chain of Responsibility Pattern</string>
+    <string name="lbl_behavioral_observer">Observer Pattern</string>
+    <string name="lbl_behavioral_strategy">Strategy Pattern</string>
+    <string name="lbl_behavioral_command">Command Pattern</string>
+    <string name="lbl_behavioral_state">State Pattern</string>
+    <string name="lbl_behavioral_visitor">Visitor Pattern</string>
+    <string name="lbl_behavioral_iterator">Iterator Pattern</string>
+    <string name="lbl_behavioral_interpreter">Interpreter Pattern</string>
+    <string name="lbl_behavioral_memento">Memento Pattern</string>
 </resources>

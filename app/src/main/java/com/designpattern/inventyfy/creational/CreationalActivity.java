@@ -79,7 +79,6 @@ public class CreationalActivity extends AppCompatActivity implements ItemAdapter
                 getString(R.string.lbl_creation_builder)));
         designPatternEntities.add(new DesignPatternTypeEntity(Constants.CREATIONAL_PROTOTYPE,
                 getString(R.string.lbl_creation_prototype)));
-
     }
 
     @Override
