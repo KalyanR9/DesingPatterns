@@ -26,6 +26,10 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".behavioral.BehavioralActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".ActivityFragmentHolder"
             android:screenOrientation="portrait" />
     </application>

@@ -62,7 +62,7 @@ public class Constants {
     public static final int BEHAVIORAL_COMMAND_PATTERN = 305;
     public static final int BEHAVIORAL_STATE_PATTERN = 306;
     public static final int BEHAVIORAL_VISITOR_PATTERN = 307;
-    public static final int BEHAVIORAL_INTERATOR_PATTERN = 308;
+    public static final int BEHAVIORAL_ITERATOR_PATTERN = 308;
     public static final int BEHAVIORAL_INTERPRETER_PATTERN = 309;
     public static final int BEHAVIORAL_MEMENTO_PATTERN = 310;
 
@@ -75,7 +75,7 @@ public class Constants {
             BEHAVIORAL_COMMAND_PATTERN,
             BEHAVIORAL_STATE_PATTERN,
             BEHAVIORAL_VISITOR_PATTERN,
-            BEHAVIORAL_INTERATOR_PATTERN,
+            BEHAVIORAL_ITERATOR_PATTERN,
             BEHAVIORAL_INTERPRETER_PATTERN,
             BEHAVIORAL_MEMENTO_PATTERN
     })

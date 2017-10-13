@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.designpattern.inventyfy.behavioral.BehavioralActivity;
 import com.designpattern.inventyfy.creational.CreationalActivity;
 import com.designpattern.inventyfy.structural.StructuralActivity;
 
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(structuralIntent);
                 break;
             case R.id.btn_behavioural:
+                Intent behavioralIntent = new Intent(this, BehavioralActivity.class);
+                startActivity(behavioralIntent);
                 break;
         }
     }
