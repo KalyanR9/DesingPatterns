@@ -19,4 +19,9 @@ public class LinkConstants {
     public static final String ABSTRACT_FACTORY_PATTERN = "https://github.com/drdesai03/DesingPatterns/tree/master/app/src/main/java/com/designpattern/inventyfy/creational/abstractfactorypatternw";
     public static final String BUILDER_PATTERN = "https://github.com/drdesai03/DesingPatterns/tree/master/app/src/main/java/com/designpattern/inventyfy/creational/builder";
     public static final String PROTOTYPE_PATTERN = "https://github.com/drdesai03/DesingPatterns/tree/master/app/src/main/java/com/designpattern/inventyfy/creational/prototype";
+
+    /**
+     * Structural pattern class github links
+     */
+    public static final String ADAPTER_PATTERN = "";
 }

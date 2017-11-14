@@ -1,16 +1,21 @@
 package com.designpattern.inventyfy.structural;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.designpattern.inventyfy.ActivityFragmentHolder;
 import com.designpattern.inventyfy.R;
 import com.designpattern.inventyfy.adapter.ItemAdapter;
+import com.designpattern.inventyfy.creational.CreationalActivity;
 import com.designpattern.inventyfy.dao.DesignPatternTypeEntity;
 import com.designpattern.inventyfy.utils.Constants;
+import com.designpattern.inventyfy.utils.widget.CustomDialogFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +65,13 @@ public class StructuralActivity extends AppCompatActivity implements ItemAdapter
 
     @Override
     public void onItemClick(int itemId) {
-
+        final FragmentManager fm = getSupportFragmentManager();
+        switch (itemId) {
+            case Constants.STRUCTURAL_ADAPTER_PATTERN:
+                Intent factoryIntent = new Intent(StructuralActivity.this, ActivityFragmentHolder.class);
+                factoryIntent.putExtra(Constants.EXTRA_FRAGMENT_TYPE, Constants.STRUCTURAL_ADAPTER_PATTERN);
+                startActivity(factoryIntent );
+                break;
+        }
     }
 }

@@ -16,7 +16,6 @@ import com.designpattern.inventyfy.creational.facorypattern.MobileFactory;
 import com.designpattern.inventyfy.utils.UiUtils;
 
 import static com.designpattern.inventyfy.utils.LinkConstants.FACTORY_PATTERN;
-import static com.designpattern.inventyfy.utils.LinkConstants.SINGLETON_ENUM_CLASS;
 
 /**
  * Created by desaidr

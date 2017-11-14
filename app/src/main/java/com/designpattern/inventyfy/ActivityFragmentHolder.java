@@ -9,6 +9,7 @@ import com.designpattern.inventyfy.creational.abstractfactorypattern.ui.Abstract
 import com.designpattern.inventyfy.creational.builder.ui.BuilderFactoryPatternFragment;
 import com.designpattern.inventyfy.creational.facorypattern.ui.FactoryPatternImplFragment;
 import com.designpattern.inventyfy.creational.prototype.ui.PrototypePatternFragment;
+import com.designpattern.inventyfy.structural.adapter.ui.AdapterFactoryFragment;
 import com.designpattern.inventyfy.utils.Constants;
 
 /**
@@ -35,6 +36,9 @@ public class ActivityFragmentHolder extends AppCompatActivity {
         }
 
         switch (screenType) {
+            /**
+             * Creational Fragments
+             */
             case Constants.CREATIONAL_FACTORY:
                 launchFragment(FactoryPatternImplFragment.getInstance());
                 break;
@@ -46,6 +50,12 @@ public class ActivityFragmentHolder extends AppCompatActivity {
                 break;
             case Constants.CREATIONAL_PROTOTYPE:
                 launchFragment(PrototypePatternFragment.getInstance());
+                break;
+            /**
+             * Structural Fragments
+             */
+            case Constants.STRUCTURAL_ADAPTER_PATTERN:
+                launchFragment(AdapterFactoryFragment.getInstance());
                 break;
         }
     }

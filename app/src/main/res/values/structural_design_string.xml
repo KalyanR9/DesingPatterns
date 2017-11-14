@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="msg_adapter">This design pattern is one of the structural design pattern and its used so
+        that two unrelated interface can work together. The object that join that joins these unrelated interface
+        is called an Adapter.\n\nAdapter pattern take two forms \n\'CLASS ADAPTER\' : utilize Java Inheritance.
+        Class adapter extends the adoptee class (Using Interface) and adds desired methods to adapter.
+        \n\'OBJECT ADAPTER\' : utilize Java Composition. The adapter object contains an adoptee and
+        implements the target interface to interact with adoptee.
+    </string>
+
+</resources>
